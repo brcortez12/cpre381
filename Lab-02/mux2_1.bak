@@ -1,0 +1,42 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity mux2 is
+
+  port(i_A          : in std_logic;
+       i_B          : in std_logic;
+       i_S          : in std_logic;
+       o_F          : out std_logic);
+
+end mux2;
+
+architecture structure of mux2 is
+
+component andg2
+
+  port(i_A          : in std_logic;
+       i_B          : in std_logic;
+       o_F          : out std_logic);
+
+end component;
+
+component org2
+
+  port(i_A          : in std_logic;
+       i_B          : in std_logic;
+       o_F          : out std_logic);
+
+end component;
+
+component invg
+
+  port(i_A          : in std_logic;
+       o_F          : out std_logic);
+
+end component;
+
+begin
+
+  o_F <= (i_A and i_S) or (i_B and (not i_S));
+  
+end structure;
