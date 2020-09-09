@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity Einstein is
+
+  port(iCLK             : in std_logic;
+       iX 		            : in integer;
+       oY 		            : out integer);
+
+end Einstein;
+
+architecture structure of Einstein is
+
+  component Multiplier
+    port(iCLK           : in std_logic;
+         iA             : in integer;
+         iB             : in integer;
+         oC             : out integer);
+  end component;
+
+  -- Provided constant c to yeild gigajoules
+  constant cC : integer := 9487;
+
+  -- Signal to store c*c
+  signal sVALUE_cc          : integer;
+
+begin
+
+  
+  ---------------------------------------------------------------------------
+  -- Calculate c*c
+  ---------------------------------------------------------------------------
+  Mult1: Multiplier
+    port MAP(iCLK             => iCLK,
+             iA               => cC,
+             iB               => cC,
+             oC               => sVALUE_cc)
+    
+ ---------------------------------------------------------------------------
+  -- Calculate m*c*c
+  ---------------------------------------------------------------------------
+  Mult2: Multiplier
+    port MAP(iCLK             => iCLK,
+             iA               => sVALUE_cc,
+             iB               => iX,
+             oC               => oY);
+  
+end structure;
