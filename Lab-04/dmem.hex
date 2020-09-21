@@ -14,13 +14,13 @@
 // 
 00000001 // Loads at address 0
 00000002
-00000003
+FFFFFFFD
 00000004
-00000005
+FFFFFFFB
 00000006
-00000007
+FFFFFFF9
 00000008
-00000009
+FFFFFFF7
 0000000A // Loads at address 9
 
 @15      // Specifies the following values will be loaded starting at address 0x15 (remember, this is a .hex file so the values are in hex) or 21 in decimal

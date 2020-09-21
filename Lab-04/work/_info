@@ -1,0 +1,49 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/brand/GitHub/cpre381/Lab-04
+Emips_extender
+Z1 w1600632065
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd
+Z5 FC:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd
+l0
+L4
+VYkG3LV;DaLbN[aBS?RB@i2
+!s100 dnTB?D^MhhGciX22QW04<0
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1600632071
+!i10b 1
+Z8 !s108 1600632071.000000
+Z9 !s90 -reportprogress|300|-work|work|-O0|C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd|
+Z10 !s107 C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd|
+!i113 1
+Z11 o-work work -O0
+Z12 tExplicit 1
+Adataflow
+R2
+R3
+Z13 DEx4 work 13 mips_extender 0 22 YkG3LV;DaLbN[aBS?RB@i2
+l16
+L14
+VVDej3=mZ@zJWV7W_IK20M2
+!s100 E;I1Z99Z<Z74B^NhLck[B2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
