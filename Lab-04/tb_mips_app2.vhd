@@ -74,12 +74,175 @@ P_TB: process
     s_WA  <= "11001";
     s_RA1 <= "00000";
     s_RA2 <= "00000";
-    s_IMM <= x"0100";
+    s_IMM <= x"0000";
     s_extCtl  <= '0';
     s_ALU <= '1';
     s_AdS <= '0';
     s_outSel  <= '1';
-    wait for cCLK_PER; 
+    wait for cCLK_PER;  --Load &A into $25
+
+    s_WA  <= "11010";
+    s_IMM <= x"0100";
+    wait for cCLK_PER;  -- Load &B into $26
+
+    s_WA  <= "00001";
+    s_RA1 <= "11001";
+    s_RA2 <= "00000";
+    s_IMM <= x"0000";
+    s_outSel  <= '0';
+    wait for cCLK_PER;  -- Load A[0] into $1
+
+    s_WA  <= "00010";
+    s_RA1 <= "11001";
+    s_RA2 <= "00000";
+    s_IMM <= x"0004";
+    s_outSel  <= '0';
+    wait for cCLK_PER;  --Load A[1] into $2
+
+    s_WA  <= "00001";
+    s_RA1 <= "00001";
+    s_RA2 <= "00010";
+    s_ALU <= '0';
+    s_outSel  <= '1';
+    wait for cCLK_PER;  --$1 = $1 + $2
+
+    s_WE  <= '0';
+    s_memWE  <= '1';
+    s_RA1 <= "11010";
+    s_RA2 <= "00001";
+    s_IMM <= x"0000";
+    s_ALU <= '1';
+    wait for cCLK_PER;  --Store $1 into B[0]
+
+    s_WE  <= '1';
+    s_memWE  <= '0';
+    s_WA  <= "00010";
+    s_RA1 <= "11001";
+    s_IMM <= x"0008";
+    s_ALU <= '1';
+    s_outSel  <= '0';
+    wait for cCLK_PER;  --Load A[2] into $2
+
+    s_WA  <= "00001";
+    s_RA1 <= "00001";
+    s_RA2 <= "00010";
+    s_ALU <= '0';
+    s_outSel  <= '1';
+    wait for cCLK_PER;  --$1 = $1 + $2
+
+    s_WE  <= '0';
+    s_memWE  <= '1';
+    s_RA1 <= "11010";
+    s_RA2 <= "00001";
+    s_IMM <= x"0004";
+    s_ALU <= '1';
+    wait for cCLK_PER;  --Store $1 into B[1]
+
+    s_WE  <= '1';
+    s_memWE  <= '0';
+    s_WA  <= "00010";
+    s_RA1 <= "11001";
+    s_IMM <= x"000C";
+    s_ALU <= '1';
+    s_outSel  <= '0';
+    wait for cCLK_PER;  --Load A[3] into $2
+
+    s_WA  <= "00001";
+    s_RA1 <= "00001";
+    s_RA2 <= "00010";
+    s_ALU <= '0';
+    s_outSel  <= '1';
+    wait for cCLK_PER;  --$1 = $1 + $2
+
+    s_WE  <= '0';
+    s_memWE  <= '1';
+    s_RA1 <= "11010";
+    s_RA2 <= "00001";
+    s_IMM <= x"0008";
+    s_ALU <= '1';
+    wait for cCLK_PER;  --Store $1 into B[2]
+
+    s_WE  <= '1';
+    s_memWE  <= '0';
+    s_WA  <= "00010";
+    s_RA1 <= "11001";
+    s_IMM <= x"0010";
+    s_ALU <= '1';
+    s_outSel  <= '0';
+    wait for cCLK_PER;  --Load A[4] into $2
+
+    s_WA  <= "00001";
+    s_RA1 <= "00001";
+    s_RA2 <= "00010";
+    s_ALU <= '0';
+    s_outSel  <= '1';
+    wait for cCLK_PER;  --$1 = $1 + $2
+
+    s_WE  <= '0';
+    s_memWE  <= '1';
+    s_RA1 <= "11010";
+    s_RA2 <= "00001";
+    s_IMM <= x"000C";
+    s_ALU <= '1';
+    wait for cCLK_PER;  --Store $1 into B[3]
+
+    s_WE  <= '1';
+    s_memWE  <= '0';
+    s_WA  <= "00010";
+    s_RA1 <= "11001";
+    s_IMM <= x"0014";
+    s_ALU <= '1';
+    s_outSel  <= '0';
+    wait for cCLK_PER;  --Load A[5] into $2
+
+    s_WA  <= "00001";
+    s_RA1 <= "00001";
+    s_RA2 <= "00010";
+    s_ALU <= '0';
+    s_outSel  <= '1';
+    wait for cCLK_PER;  --$1 = $1 + $2
+
+    s_WE  <= '0';
+    s_memWE  <= '1';
+    s_RA1 <= "11010";
+    s_RA2 <= "00001";
+    s_IMM <= x"0010";
+    s_ALU <= '1';
+    wait for cCLK_PER;  --Store $1 into B[4]
+
+    s_WE  <= '1';
+    s_memWE  <= '0';
+    s_WA  <= "00010";
+    s_RA1 <= "11001";
+    s_IMM <= x"0018";
+    s_ALU <= '1';
+    s_outSel  <= '0';
+    wait for cCLK_PER;  --Load A[6] into $2
+
+    s_WA  <= "00001";
+    s_RA1 <= "00001";
+    s_RA2 <= "00010";
+    s_ALU <= '0';
+    s_outSel  <= '1';
+    wait for cCLK_PER;  --$1 = $1 + $2
+
+    s_WE  <= '1';
+    s_memWE  <= '0';
+    s_WA  <= "11011";
+    s_RA1 <= "11010";
+    s_IMM <= x"0200";
+    s_ALU <= '1';
+    s_outSel  <= '1';
+    wait for cCLK_PER;  --Load &B[128] into $27
+
+    s_WE  <= '0';
+    s_memWE  <= '1';
+    s_RA1 <= "11011";
+    s_RA2 <= "00001";
+    s_IMM <= x"0004";
+    s_ALU <= '1';
+    s_AdS  <= '1';
+    wait for cCLK_PER;  --Store $1 into B[255]
 
     wait;
   end process;
