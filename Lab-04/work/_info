@@ -647,7 +647,7 @@ R92
 R11
 R12
 Etb_mips_app2
-Z93 w1600842095
+Z93 w1600850730
 R38
 R30
 R2
@@ -661,10 +661,10 @@ VS];c^jO<hoWo1[kSgJjJW1
 !s100 ]LMhY;a1mm^JYWm6@<W[[1
 R6
 32
-Z96 !s110 1600842103
+Z96 !s110 1600850746
 !i10b 1
-Z97 !s108 1600842103.000000
-Z98 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-04/tb_mips_app2.vhd|
+Z97 !s108 1600850746.000000
+Z98 !s90 -reportprogress|300|-work|work|-O0|C:/Users/brand/GitHub/cpre381/Lab-04/tb_mips_app2.vhd|
 Z99 !s107 C:/Users/brand/GitHub/cpre381/Lab-04/tb_mips_app2.vhd|
 !i113 1
 R11
@@ -677,8 +677,8 @@ R3
 Z100 DEx4 work 12 tb_mips_app2 0 22 S];c^jO<hoWo1[kSgJjJW1
 l40
 L12
-V:dZHQ<CeH^j2GCPa^`=k21
-!s100 _U=W:M5hcDAFB>H^=WmS@1
+V0Y>EBAnIA6ciboE0iE0Q>1
+!s100 ZMddZI1GOjM48E9h87ehV0
 R6
 32
 R96
