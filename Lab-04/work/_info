@@ -8,35 +8,35 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/brand/GitHub/cpre381/Lab-04
-Emips_extender
-Z1 w1600632065
+Eandg2
+Z1 w1599666190
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd
-Z5 FC:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd
+Z4 8C:/Users/brand/GitHub/cpre381/Lab-03/andg2.vhd
+Z5 FC:/Users/brand/GitHub/cpre381/Lab-03/andg2.vhd
 l0
-L4
-VYkG3LV;DaLbN[aBS?RB@i2
-!s100 dnTB?D^MhhGciX22QW04<0
+L23
+VkENG^`gSRYSE_]a5lVP[<3
+!s100 YT?bGzEmcFo:DlnoC^B4_0
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1600632071
+Z7 !s110 1600828268
 !i10b 1
-Z8 !s108 1600632071.000000
-Z9 !s90 -reportprogress|300|-work|work|-O0|C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd|
-Z10 !s107 C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd|
+Z8 !s108 1600828268.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/andg2.vhd|
+Z10 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/andg2.vhd|
 !i113 1
 Z11 o-work work -O0
 Z12 tExplicit 1
 Adataflow
 R2
 R3
-Z13 DEx4 work 13 mips_extender 0 22 YkG3LV;DaLbN[aBS?RB@i2
-l16
-L14
-VVDej3=mZ@zJWV7W_IK20M2
-!s100 E;I1Z99Z<Z74B^NhLck[B2
+DEx4 work 5 andg2 0 22 kENG^`gSRYSE_]a5lVP[<3
+l32
+L31
+VeESY::K5feQNg=:fY:4?62
+!s100 I`@Z@UBObS]<7m8bPgKUS1
 R6
 32
 R7
@@ -44,6 +44,708 @@ R7
 R8
 R9
 R10
+!i113 1
+R11
+R12
+Edecoder
+R1
+R2
+R3
+R0
+Z13 8C:/Users/brand/GitHub/cpre381/Lab-03/decoder.vhd
+Z14 FC:/Users/brand/GitHub/cpre381/Lab-03/decoder.vhd
+l0
+L4
+V?NQ_609Th58J?4bmNzf]V2
+!s100 z?WK_4fFSGi8I^1lQO2@I0
+R6
+32
+Z15 !s110 1600828269
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/decoder.vhd|
+Z17 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/decoder.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 7 decoder 0 22 ?NQ_609Th58J?4bmNzf]V2
+l12
+L11
+V?[m89B?S]3bB`bgA[>G`01
+!s100 ;8@>4nd;55WU0C4=_5gQH0
+R6
+32
+R15
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Edff
+R1
+R2
+R3
+R0
+Z18 8C:/Users/brand/GitHub/cpre381/Lab-03/dff.vhd
+Z19 FC:/Users/brand/GitHub/cpre381/Lab-03/dff.vhd
+l0
+L21
+VbWh5d04YSYd9EzFG@1T4X0
+!s100 mT_OLTf8f1nD0BMVi`22Q3
+R6
+32
+Z20 !s110 1600828959
+!i10b 1
+Z21 !s108 1600828959.000000
+Z22 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/dff.vhd|
+Z23 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/dff.vhd|
+!i113 1
+R11
+R12
+Amixed
+R2
+R3
+DEx4 work 3 dff 0 22 bWh5d04YSYd9EzFG@1T4X0
+l35
+L31
+V59fak4n7Nk0WI8]k8Wd_03
+!s100 j3C[YCFRW8M@3<JaVm8?<1
+R6
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R11
+R12
+Einvg
+R1
+R2
+R3
+R0
+Z24 8C:/Users/brand/GitHub/cpre381/Lab-03/invg.vhd
+Z25 FC:/Users/brand/GitHub/cpre381/Lab-03/invg.vhd
+l0
+L23
+V1_]Wn`]5f;JVHKiD9[c>i1
+!s100 _XK?_^5z0Rm1<k12?;5R?2
+R6
+32
+R15
+!i10b 1
+Z26 !s108 1600828269.000000
+Z27 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/invg.vhd|
+Z28 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/invg.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 4 invg 0 22 1_]Wn`]5f;JVHKiD9[c>i1
+l31
+L30
+V8B]MHoUcDFKI2<coS@dii1
+!s100 bk7I76o8e1LURdoZEQb8H0
+R6
+32
+R15
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R11
+R12
+Emem
+Z29 w1600584276
+Z30 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z31 8C:/Users/brand/GitHub/cpre381/Lab-04/mem.vhd
+Z32 FC:/Users/brand/GitHub/cpre381/Lab-04/mem.vhd
+l0
+L8
+VPW3iN7DIE3zQ4o9`E]VcP2
+!s100 fRlcaiTJZJ1H;nZh;8=LI3
+R6
+32
+Z33 !s110 1600796267
+!i10b 1
+Z34 !s108 1600796267.000000
+Z35 !s90 -reportprogress|300|-work|work|-O0|C:/Users/brand/GitHub/cpre381/Lab-04/mem.vhd|
+Z36 !s107 C:/Users/brand/GitHub/cpre381/Lab-04/mem.vhd|
+!i113 1
+R11
+R12
+Artl
+R30
+R2
+R3
+DEx4 work 3 mem 0 22 PW3iN7DIE3zQ4o9`E]VcP2
+l37
+L27
+V>Vg6hJ<Z_[483KaOia<>C3
+!s100 OI8_3><BhDkT3l3n8`OXd3
+R6
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R11
+R12
+Emips_app2
+Z37 w1600839300
+Z38 DPx4 work 10 vector_arr 0 22 EXjFbnnMiDlh8DMR5::Vf2
+R30
+R2
+R3
+R0
+Z39 8C:/Users/brand/GitHub/cpre381/Lab-04/mips_app2.vhd
+Z40 FC:/Users/brand/GitHub/cpre381/Lab-04/mips_app2.vhd
+l0
+L6
+V^:@]O9C^W`C`NPao0LS@f0
+!s100 61k=<OUDOfOjze8VF6N]<2
+R6
+32
+Z41 !s110 1600839311
+!i10b 1
+Z42 !s108 1600839311.000000
+Z43 !s90 -reportprogress|300|-work|work|-O0|C:/Users/brand/GitHub/cpre381/Lab-04/mips_app2.vhd|
+Z44 !s107 C:/Users/brand/GitHub/cpre381/Lab-04/mips_app2.vhd|
+!i113 1
+R11
+R12
+Astructure
+R38
+R30
+R2
+R3
+DEx4 work 9 mips_app2 0 22 ^:@]O9C^W`C`NPao0LS@f0
+l79
+L26
+V]_U16jblV3oiZ>?0@HVJI0
+!s100 ^3Y2LTh1eT=>VPBF?Em2b1
+R6
+32
+R41
+!i10b 1
+R42
+R43
+R44
+!i113 1
+R11
+R12
+Emips_extender
+Z45 w1600632065
+R2
+R3
+R0
+Z46 8C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd
+Z47 FC:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd
+l0
+L4
+VYkG3LV;DaLbN[aBS?RB@i2
+!s100 dnTB?D^MhhGciX22QW04<0
+R6
+32
+Z48 !s110 1600632071
+!i10b 1
+Z49 !s108 1600632071.000000
+Z50 !s90 -reportprogress|300|-work|work|-O0|C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd|
+Z51 !s107 C:/Users/brand/GitHub/cpre381/Lab-04/mips_extender.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 13 mips_extender 0 22 YkG3LV;DaLbN[aBS?RB@i2
+l16
+L14
+VVDej3=mZ@zJWV7W_IK20M2
+!s100 E;I1Z99Z<Z74B^NhLck[B2
+R6
+32
+R48
+!i10b 1
+R49
+R50
+R51
+!i113 1
+R11
+R12
+Emux_32_1
+R1
+R38
+R2
+R3
+R0
+Z52 8C:/Users/brand/GitHub/cpre381/Lab-03/mux_32_1.vhd
+Z53 FC:/Users/brand/GitHub/cpre381/Lab-03/mux_32_1.vhd
+l0
+L12
+V9Kc;[jz]bGZbZa88TX0c^1
+!s100 [g_S5J4a:NR3^Y2`U:ALR2
+R6
+32
+R15
+!i10b 1
+R26
+Z54 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/mux_32_1.vhd|
+Z55 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/mux_32_1.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R38
+R2
+R3
+DEx4 work 8 mux_32_1 0 22 9Kc;[jz]bGZbZa88TX0c^1
+l21
+L20
+VhGa8a^g7>c<ED8^WGdeBH0
+!s100 `;`ZVQj9?93H;IMVl=7h33
+R6
+32
+R15
+!i10b 1
+R26
+R54
+R55
+!i113 1
+R11
+R12
+En_bit_add_sub
+R1
+R30
+R2
+R3
+R0
+Z56 8C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_add_sub.vhd
+Z57 FC:/Users/brand/GitHub/cpre381/Lab-03/n_bit_add_sub.vhd
+l0
+L5
+VcL5J`dI4C^<;fgAB;IdnI2
+!s100 U_ZVPa7n>fJBk_LB2]hn=3
+R6
+32
+R15
+!i10b 1
+R26
+Z58 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_add_sub.vhd|
+Z59 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_add_sub.vhd|
+!i113 1
+R11
+R12
+Astructure
+R30
+R2
+R3
+DEx4 work 13 n_bit_add_sub 0 22 cL5J`dI4C^<;fgAB;IdnI2
+l44
+L14
+VQIdFCHJfAV[G?]<6OMoMd2
+!s100 @P]Ab?zhZnc3MSjb3GFF<0
+R6
+32
+R15
+!i10b 1
+R26
+R58
+R59
+!i113 1
+R11
+R12
+En_bit_full_adder
+R1
+R2
+R3
+R0
+Z60 8C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_full_adder.vhd
+Z61 FC:/Users/brand/GitHub/cpre381/Lab-03/n_bit_full_adder.vhd
+l0
+L4
+VQBzKV610WTL[^_lJ4]Ea81
+!s100 CQ?kY;NPnDbA@hV>`9UCG3
+R6
+32
+R15
+!i10b 1
+R26
+Z62 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_full_adder.vhd|
+Z63 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_full_adder.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 16 n_bit_full_adder 0 22 QBzKV610WTL[^_lJ4]Ea81
+l44
+L14
+VQS1AG5BRL:2jH_cV6nDM43
+!s100 [gBbbLQ]knJTZ@]lRDBjB3
+R6
+32
+R15
+!i10b 1
+R26
+R62
+R63
+!i113 1
+R11
+R12
+En_bit_mux2_1
+R1
+R2
+R3
+R0
+Z64 8C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_mux2_1.vhd
+Z65 FC:/Users/brand/GitHub/cpre381/Lab-03/n_bit_mux2_1.vhd
+l0
+L4
+VWXYfDWMF4I2_MQaS[`MPF1
+!s100 Za003dc;4K3m0Xib3SV6j3
+R6
+32
+R15
+!i10b 1
+R26
+Z66 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_mux2_1.vhd|
+Z67 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_mux2_1.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 12 n_bit_mux2_1 0 22 WXYfDWMF4I2_MQaS[`MPF1
+l42
+L13
+VzL4hH@zYAaGN;A]>LB0Oc1
+!s100 `F]<A0eW;@L579<601VB=1
+R6
+32
+R15
+!i10b 1
+R26
+R66
+R67
+!i113 1
+R11
+R12
+En_bit_reg
+R1
+R2
+R3
+R0
+Z68 8C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_reg.vhd
+Z69 FC:/Users/brand/GitHub/cpre381/Lab-03/n_bit_reg.vhd
+l0
+L4
+VQo284Z]^YS;[QmP<`zJi<2
+!s100 R39b;g^]jKE[UD?BdP9:O0
+R6
+32
+R15
+!i10b 1
+R26
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_reg.vhd|
+Z71 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/n_bit_reg.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 9 n_bit_reg 0 22 Qo284Z]^YS;[QmP<`zJi<2
+l24
+L14
+VVhSX_j0dRUPcnfD>DWzog3
+!s100 LO3_BXjNW4V_U3;EaSV@W0
+R6
+32
+R15
+!i10b 1
+R26
+R70
+R71
+!i113 1
+R11
+R12
+En_ones_comp
+R1
+R2
+R3
+R0
+Z72 8C:/Users/brand/GitHub/cpre381/Lab-03/n_ones_comp.vhd
+Z73 FC:/Users/brand/GitHub/cpre381/Lab-03/n_ones_comp.vhd
+l0
+L4
+VU4e]mS]dHXcRL@k<mkA>>2
+!s100 M3AXSZnaGBVR4[bS@;1PQ1
+R6
+32
+R15
+!i10b 1
+R26
+Z74 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/n_ones_comp.vhd|
+Z75 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/n_ones_comp.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 11 n_ones_comp 0 22 U4e]mS]dHXcRL@k<mkA>>2
+l18
+L11
+Ve[^5dz4A3V_ikQo<[Wf?h1
+!s100 g8j3H:3@ig=mc67;zV[iM1
+R6
+32
+R15
+!i10b 1
+R26
+R74
+R75
+!i113 1
+R11
+R12
+Eorg2
+R1
+R2
+R3
+R0
+Z76 8C:/Users/brand/GitHub/cpre381/Lab-03/org2.vhd
+Z77 FC:/Users/brand/GitHub/cpre381/Lab-03/org2.vhd
+l0
+L23
+VJRk_J;=P2[3FhjKXmTI_61
+!s100 bGQ1F9eW^Q17OoL9h4g7z2
+R6
+32
+Z78 !s110 1600828270
+!i10b 1
+Z79 !s108 1600828270.000000
+Z80 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/org2.vhd|
+Z81 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/org2.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 4 org2 0 22 JRk_J;=P2[3FhjKXmTI_61
+l32
+L31
+V[d?3d16EeHadTLlcll1cS1
+!s100 h5_AzR3TdRA0a_K=dQ>mI2
+R6
+32
+R78
+!i10b 1
+R79
+R80
+R81
+!i113 1
+R11
+R12
+Ereg_file
+R1
+R38
+R2
+R3
+R0
+Z82 8C:/Users/brand/GitHub/cpre381/Lab-03/reg_File.vhd
+Z83 FC:/Users/brand/GitHub/cpre381/Lab-03/reg_File.vhd
+l0
+L5
+V][D6chaRWRm5]ART<3E[m2
+!s100 E6]O:Gj[QmaWWMTV5;5I?0
+R6
+32
+R78
+!i10b 1
+R79
+Z84 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-03/reg_File.vhd|
+Z85 !s107 C:/Users/brand/GitHub/cpre381/Lab-03/reg_File.vhd|
+!i113 1
+R11
+R12
+Astructure
+R38
+R2
+R3
+DEx4 work 8 reg_file 0 22 ][D6chaRWRm5]ART<3E[m2
+l51
+L19
+V4nl]FCcIcT=>V4g5R4C6l2
+!s100 3Vn_C@ZWEi=J`n4@fk1QA1
+R6
+32
+R78
+!i10b 1
+R79
+R84
+R85
+!i113 1
+R11
+R12
+Etb_dmem
+Z86 w1600798633
+R30
+R2
+R3
+R0
+Z87 8C:/Users/brand/GitHub/cpre381/Lab-04/tb_dmem.vhd
+Z88 FC:/Users/brand/GitHub/cpre381/Lab-04/tb_dmem.vhd
+l0
+L5
+V4e8L@Qn5m`c^6nH;^1Kc;0
+!s100 dG]UQ0]0z_FR4Qah`WnhE0
+R6
+32
+Z89 !s110 1600798648
+!i10b 1
+Z90 !s108 1600798648.000000
+Z91 !s90 -reportprogress|300|-work|work|-O0|C:/Users/brand/GitHub/cpre381/Lab-04/tb_dmem.vhd|
+Z92 !s107 C:/Users/brand/GitHub/cpre381/Lab-04/tb_dmem.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R30
+R2
+R3
+DEx4 work 7 tb_dmem 0 22 4e8L@Qn5m`c^6nH;^1Kc;0
+l30
+L12
+VH>ABILBDF7Ej<3CgiL:Hc0
+!s100 D8bBTI6nYMROo0z6VfP483
+R6
+32
+R89
+!i10b 1
+R90
+R91
+R92
+!i113 1
+R11
+R12
+Etb_mips_app2
+Z93 w1600842095
+R38
+R30
+R2
+R3
+R0
+Z94 8C:/Users/brand/GitHub/cpre381/Lab-04/tb_mips_app2.vhd
+Z95 FC:/Users/brand/GitHub/cpre381/Lab-04/tb_mips_app2.vhd
+l0
+L6
+VS];c^jO<hoWo1[kSgJjJW1
+!s100 ]LMhY;a1mm^JYWm6@<W[[1
+R6
+32
+Z96 !s110 1600842103
+!i10b 1
+Z97 !s108 1600842103.000000
+Z98 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-04/tb_mips_app2.vhd|
+Z99 !s107 C:/Users/brand/GitHub/cpre381/Lab-04/tb_mips_app2.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R38
+R30
+R2
+R3
+Z100 DEx4 work 12 tb_mips_app2 0 22 S];c^jO<hoWo1[kSgJjJW1
+l40
+L12
+V:dZHQ<CeH^j2GCPa^`=k21
+!s100 _U=W:M5hcDAFB>H^=WmS@1
+R6
+32
+R96
+!i10b 1
+R97
+R98
+R99
+!i113 1
+R11
+R12
+Pvector_arr
+R2
+R3
+R1
+R0
+R52
+R53
+l0
+L4
+VEXjFbnnMiDlh8DMR5::Vf2
+!s100 =994W^<h7F?f@?nE0llQ62
+R6
+32
+R15
+!i10b 1
+R26
+R54
+R55
+!i113 1
+R11
+R12
+Exorg2
+Z101 w1599666856
+R2
+R3
+R0
+Z102 8C:/Users/brand/GitHub/cpre381/Lab-02/xorg2.vhd
+Z103 FC:/Users/brand/GitHub/cpre381/Lab-02/xorg2.vhd
+l0
+L23
+VK@e^LV@NIoQEFG<>mYGML0
+!s100 [hI[mXFH4_j16U;>U1Lfn2
+R6
+32
+Z104 !s110 1600828943
+!i10b 1
+Z105 !s108 1600828943.000000
+Z106 !s90 -reportprogress|300|-work|work|C:/Users/brand/GitHub/cpre381/Lab-02/xorg2.vhd|
+Z107 !s107 C:/Users/brand/GitHub/cpre381/Lab-02/xorg2.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 5 xorg2 0 22 K@e^LV@NIoQEFG<>mYGML0
+l32
+L31
+VNhjJam]<eOn>h_SB`YlEa0
+!s100 Z6[FAPS4fBLB`F?OO<AY72
+R6
+32
+R104
+!i10b 1
+R105
+R106
+R107
 !i113 1
 R11
 R12

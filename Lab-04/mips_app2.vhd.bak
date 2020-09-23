@@ -1,0 +1,123 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use work.vector_arr.all;
+
+entity MIPS_app2 is
+  generic(N : integer := 32;
+            J : integer := 32/2;
+            DATA_WIDTH : natural := 32;
+            ADDR_WIDTH : natural := 10);
+  port(i_CLK        : in std_logic;     -- Clock input
+       i_RST        : in std_logic;     -- Reset input
+       i_writeEnable        : in std_logic;     -- Write Enable
+       i_writeAddr          : in std_logic_vector(4 downto 0);     -- Write address input
+       i_readAddr1          : in std_logic_vector(4 downto 0);     -- Read address 1 input
+       i_readAddr2          : in std_logic_vector(4 downto 0);     -- Read address 2 input
+       immediate    : in std_logic_vector(J-1 downto 0);
+       ALUSrc	    : in std_logic;
+       i_Ad_Sb	    : in std_logic;
+       Extend_Ctl	    : in std_logic;
+       memWEnable	    : in std_logic;
+       outSelect	    : in std_logic);
+
+end MIPS_app2;
+
+architecture structure of MIPS_app2 is
+
+component reg_file
+    generic(N : integer := 32);
+    port(i_Clk        : in std_logic;     -- Clock input
+        i_Rst        : in std_logic;     -- Reset input
+        i_wE	    : in std_logic;	  --write enable
+        i_wAddr          : in std_logic_vector(4 downto 0);     -- Write address input
+        i_rAddr1          : in std_logic_vector(4 downto 0);     -- Read address 1 input
+        i_rAddr2          : in std_logic_vector(4 downto 0);     -- Read address 2 input
+        i_wData          : in std_logic_vector(N-1 downto 0);     -- Write data input
+        o_rData1          : out std_logic_vector(N-1 downto 0);   -- Data 1 value output
+        o_rData2          : out std_logic_vector(N-1 downto 0));   -- Data 2 value output
+end component;
+
+component mips_extender
+    generic(
+      N : integer := 32;
+      J : integer := 32/2);
+    port(i_in          : in std_logic_vector(J-1 downto 0);
+         i_Ctl          : in std_logic;      --unsigned when 0, signed when 1(others)
+         o_F          : out std_logic_vector(N-1 downto 0));
+  end component;
+
+component n_bit_mux2_1
+    generic(N : integer := 32);
+    port(i_A          : in std_logic_vector(N-1 downto 0);
+        i_B          : in std_logic_vector(N-1 downto 0);
+        i_S          : in std_logic;
+        o_F          : out std_logic_vector(N-1 downto 0));
+end component;
+
+component n_bit_add_sub
+    generic (N : integer := 32);
+    port(i_X	: in std_logic_vector(N-1 downto 0);
+        i_Y	: in std_logic_vector(N-1 downto 0);
+        nAdd_Sub	: in std_logic;
+        o_Val	: out std_logic_vector(N-1 downto 0);
+        o_Cout	: out std_logic);
+end component;
+
+component mem
+    generic (DATA_WIDTH : natural := 32;
+            ADDR_WIDTH : natural := 10);
+    port(clk		: in std_logic;
+		addr	        : in std_logic_vector((ADDR_WIDTH-1) downto 0);
+		data	        : in std_logic_vector((DATA_WIDTH-1) downto 0);
+		we		: in std_logic := '1';
+		q		: out std_logic_vector((DATA_WIDTH -1) downto 0));
+end component;
+
+signal s_d1, s_d2, s_ext, s_muxReg, s_addOut, s_memOut, s_muxMem	: std_logic_vector(N-1 downto 0);	--outputs of the Reg_File, Mux and Adder
+signal s_trunc  : std_logic_vector((ADDR_WIDTH-1) downto 0);
+begin
+
+R1: reg_file
+  port map(i_Clk => i_CLK,
+		i_Rst => i_RST,
+		i_wE => i_writeEnable,
+		i_wAddr => i_writeAddr,
+		i_rAddr1 => i_readAddr1,
+		i_rAddr2 => i_readAddr2,
+		i_wData => s_muxMem,
+		o_rData1 => s_d1,
+        o_rData2 => s_d2);
+        
+E1: mips_extender
+  port map(i_in => immediate,
+        i_Ctl => Extend_Ctl,
+        o_F => s_ext);
+
+M1: n_bit_mux2_1
+  port map(i_A => s_d2,
+		i_B => s_ext,
+		i_S => ALUSrc,
+		o_F => s_muxReg);
+
+A1: n_bit_add_sub
+  port map(i_X => s_d1,
+		i_Y => s_muxReg,
+		nAdd_Sub => i_Ad_Sb,
+        o_Val => s_addOut);
+        
+s_trunc <= s_addOut((ADDR_WIDTH-1) downto 0);
+MEM1: mem
+  port map(clk => i_CLK,
+        addr => s_trunc,
+        data => s_d2,
+        we => memWEnable,
+        q => s_memOut);
+
+M2: n_bit_mux2_1
+  port map(i_A => s_memOut,
+        i_B => s_addOut,
+        i_S => outSelect,
+        o_F => s_muxMem);
+
+end structure;

@@ -1,0 +1,61 @@
+{
+	// https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax
+	"Library Setup": {
+		"prefix": ["lib"],
+		"body":["library IEEE;\nuse IEEE.std_logic_1164.all;\n\n"],
+		"description": "Sets up library and use lines for vhdl"
+	},
+	"Entity":{
+		"prefix":["entity"],
+		"body":["entity $TM_FILENAME_BASE is \n\t$0\nend $TM_FILENAME_BASE;"],
+		"description": "Sets up entity block"
+	},
+	"Port":{
+		"prefix":["port"],
+		"body":["port ($0\n\n );"]
+	},
+	"Component":{
+		"prefix":["component"],
+		"body":["component ${1:comp}\n\t$0\nend component;"]
+	},
+	"Signal":{
+		"prefix": "signal",
+		"body": "signal s_"
+	},
+	"Architecture":{
+		"prefix": "architecture",
+		"body": "architecture ${1|behavioral,dataflow,hybrid,structural|} of $TM_FILENAME_BASE is\n\t$0\nend ${1|behavioral,dataflow,hybrid,structural|};"
+	},
+	"Standard Logic Vector":{
+		"prefix": ["slv","std","vector"],
+		"body": "std_logic_vector(${1:x} downto ${2:0});$0"
+	},
+	"Standard Logic":{
+		"prefix": ["std", "logic"],
+		"body": "std_logic;$0"
+	},
+	"Right Facing Arrow":{
+		"prefix": "arr",
+		"body": "=> $0"
+	},
+	"Reverse Arrow":{
+		"prefix": ["rarr", "larr"],
+		"body": "<= $0"
+	},
+	"temp":{
+		"prefix":"imm",
+		"body": "s_RA1 <= \"${1:00000}\";\ns_RA2 <= \"${2:00000}\";\ns_WA <= \"${3:00000}\";\ns_ALUSrc <= '${4:0}';\nwait for cCLK_PER;\n\n$0"
+	},
+	"generate":{
+		"prefix":["G", "generate"],
+		"body": "G${1:1}: for ${2:i} in ${3:N} to ${4:N-1} generate\n\t$0\nend generate;"
+	},
+	"process":{
+		"prefix": ["PROC", "process"],
+		"body": "PROC_${1:X}: process\n\t$0\nend process;"
+	},
+	"wait for":{
+		"prefix":["wait for", "wf"],
+		"body": "wait for ${0:100 ns};"
+	}
+}
