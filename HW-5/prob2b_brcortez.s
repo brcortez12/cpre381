@@ -1,22 +1,24 @@
-        .text
+.data
+test1arr1: .byte 1, 1, 1, 1
+test1arr2: .byte 0, 0, 0, 0
 
-        .globl main
+
+.text
+.globl main
 main:
-        #TODO parts of main and data
 
+        # Initialize registers with base addresses
+        lw	$a0, test1arr1
+        lw	$a1, test1arr2
 
-        # Register assignments
-        # $s0 = x
-        # $s1 = y
-
-        # Initialize registers
-        lw	$s0, x		# Reg $s0 = x
-        lw	$s1, y		# Reg $s1 = y
-
-        # Call function
-        move	$a0, $s0	# Argument 1: x ($s0)
+        # Call function and output result
         jal	func		# Save current PC in $ra, and jump to func
-        move	$s1,$v0		# Return value saved in $v0. This is y ($s1)
+        
+        li  $v0, 1
+	syscall		#Output sum of absolute differences of the test
+	
+	li  $v0, 10
+	syscall		#Exit
 
 
 func:   #Compute sum of absolute differences
@@ -37,8 +39,3 @@ Pos:    add $v0, $v0, $t1       #Add the difference to the sum of differences
         beq $t0, $t4, Exit      #If i = 8, more than a byte long exit
         bne $t0, $a2, Loop      #If i != array len Loop    
 Exit:   jr $ra                  #Jump to $ra
-
-
-	.data
-x:	.word 5
-y:	.word 0
