@@ -8,9 +8,9 @@
 
 
 void scale(int n, int m, int array[n][m], int scale) {
-  for (int i=0,i<n,i++) { //Iterates through columns
-    for (int j=0,j<m,j++) { //All rows in a column first
-      array[n][m] = array[n][m]*scale
+  for (int i=0;i<n;i++) { //Iterates through rows
+    for (int j=0;j<m;j++) { //All columns in row first
+      array[i][j] = array[i][j]*scale;
     }
   }
 }
